@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Add your CSS file -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Millets Nutrient Table</title>
+    <style>
+        /* General Table Styles */
+        body {
+            background-color: #f3f0f0; /* White background */
+            color: #333; /* Text color */
+            font-family: Arial, sans-serif;
+            font-size: 1.1rem; /* Slightly larger text size */
+        }
+
+        .millet-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 100px auto;
+            background-color: #ffffff; /* Table background */
+            color: #333;
+            
+        }
+
+        .millet-table th, .millet-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+            font-size: 1.5rem; /* Slightly larger text size for table content */
+        }
+
+        /* Header row styling */
+        .millet-table thead th {
+            background-color: #79320a; /* Green background for headers */
+            color: white;
+            font-weight: bold;
+        }
+
+        /* S.No Column Styling */
+        .millet-table tbody tr td:first-child, 
+        .millet-table thead tr th:first-child {
+            background-color: #79320a; /* Green background for S.No column */
+            color: white;
+        }
+
+        /* Header spanning for Nutrient Composition */
+        .nutrient-header {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* Zebra striping for rows */
+        .millet-table tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .millet-table tbody tr:hover {
+            background-color: #e2e2e2;
+        }
+       /* Table Wrapper */
+       
+
+
+/* Table Styling */
+.millet-table {
+    width: 80%;
+    border-collapse: collapse;
+    background-color: #ffffff; /* Table background */
+    color: #333;
+    margin: 10px auto; /* Center the table */
+}
+.table-wrapper{
+    margin-top: 12rem;
+    margin-bottom: 7rem;
+}
+.header{
+    margin-top: -6rem;
+}
+
+
+
+    </style>
+</head>
+<body>
+<!-- Header Section -->
+<div id="header" class="header"></div> <!-- Header will be dynamically loaded here -->
+<!-- About Content Section -->
+<section class="table-wrapper">
+    <table class="millet-table">
+        <thead>
+            <tr>
+                <th rowspan="2">S.No</th>
+                <th rowspan="2">Millets</th>
+                <th rowspan="2">Scientific name</th>
+                <th colspan="5" class="nutrient-header">Nutrient composition of millets</th>
+            </tr>
+            <tr>
+                <th>Carbohydrates</th>
+                <th>Protein content</th>
+                <th>Vitamins</th>
+                <th>Minerals</th>
+                <th>Amino acids</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Sorghum</td>
+                <td><em>Sorghum bicolor</em></td>
+                <td>70-80%</td>
+                <td>8 to 12%</td>
+                <td>Vitamins B, Vitamins E</td>
+                <td>Magnesium, Phosphorous, Iron, Zinc</td>
+                <td>Lysine, Threonine, Arginine</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Pearl Millet</td>
+                <td><em>Pennisetum glaucum</em></td>
+                <td>70%</td>
+                <td>8.07-18.15 g/100 g</td>
+                <td>Vitamin E, Niacin, Thiamine, Riboflavin</td>
+                <td>Magnesium, Calcium, Zinc, and Phosphorus</td>
+                <td>Lysine, Threonine, Tryptophan, Glycine</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Finger Millet</td>
+                <td><em>Eleusine coracana</em></td>
+                <td>72% to 79.5%</td>
+                <td>7%</td>
+                <td>Vitamin B6, Folate, Niacin, Thiamin, Riboflavin</td>
+                <td>Calcium, Potassium, Iron, Niacin, Riboflavin, Tocopherols</td>
+                <td>α-linolenic acid, Linoleic acid</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Proso millet</td>
+                <td><em>Proso millet</em></td>
+                <td>70% to 75%</td>
+                <td>11.5%-13%</td>
+                <td>B-complex vitamins (niacin, thiamine, riboflavin, and ridoxin), tocopherols</td>
+                <td>Zinc, Magnesium</td>
+                <td>Methionine and Cysteine</td>
+            </tr><tr>
+                <td>5</td>
+                <td>Little Millet</td>
+                <td><em>Panicum sumatrense</em></td>
+                <td>8.42% </td>
+                <td>7%</td>
+                <td>B-complex vitamins (niacin and thiamine).</td>
+                <td>Iron, Zinc, Magnesium, Phosphorus and Calcium.</td>
+                <td>methionine, lysine, and cysteine</td>
+            </tr><tr>
+                <td>6</td>
+                <td>Kodo Millet</td>
+                <td><em>Paspalum scrobiculatum</em></td>
+                <td>66.6%/100 gms of seed</td>
+                <td>8%</td>
+                <td>vitamin C, and vitamin E</td>
+                <td>Iron, Phosphorus</td>
+                <td>Lysine, threonine, valine, isoleucine, Cysteine and methionine</td>
+            </tr><tr>
+                <td>7</td>
+                <td>Foxtail Millet</td>
+                <td><em>Setaria italica</em></td>
+                <td>69.95% </td>
+                <td>12.3 grams of protein per 100 grams</td>
+                <td>vitamin A, niacin </td>
+                <td>Calcium, Iron, Magnesium, Phosphorus, Potassium, Sodium, Copper, and sulphur</td>
+                <td>Folic acid</td>
+            </tr><tr>
+                <td>8</td>
+                <td>Barnyard Millet</td>
+                <td><em>Echinochloa frumentacea</em></td>
+                <td>68%</td>
+                <td>7.7 grams of protein per 100 grams</td>
+                <td>B-complex vitamins (B1, B2, and B3).</td>
+                <td>Iron, Calcium, magnesium, phosphorus.</td>
+                <td>methionine and cysteine</td>
+        </tbody>
+    </table><br><br>
+    <table class="millet-table">
+        <thead>
+            <tr>
+                <th rowspan="2">S.No</th>
+                <th rowspan="2">Ancient grains </th>
+                <th rowspan="2">Scientific name</th>
+                <th colspan="5" class="nutrient-header">Nutrient composition of grains</th>
+            </tr>
+            <tr>
+                <th>Carbohydrates</th>
+                <th>Protein content</th>
+                <th>Vitamins</th>
+                <th>Minerals</th>
+                <th>Amino acids</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Oats </td>
+                <td><em>Avena sativa</em></td>
+                <td>66%</td>
+                <td>9.70 to 17.30% </td>
+                <td>Vitamin E, B vitamins (B1, B2, B3, B5, and B6)</td>
+                <td>Manganese, Phosphorus, Iron, Zinc and Magnesium</td>
+                <td>valine, isoleucine, threonine, histidine, and methionine</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Wild Rice</td>
+                <td><em>Zizania spp</em></td>
+                <td>21gm/100gms of seed</td>
+                <td>13.80%</td>
+                <td>B vitamins (thiamine, riboflavin, and niacin).</td>
+                <td>Potassium, Zinc, Iron, Nickel, Calcium, and Copper</td>
+                <td>Alanine, arginine, aspartic, lysine, and methionine</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Amaranth</td>
+                <td><em>Amaranthus spp</em></td>
+                <td>19%</td>
+                <td>12.6 to 13.9%</td>
+                <td>vitamin C, riboflavin </td>
+                <td>Iron, Calcium, Sodium, Magnesium, Zinc, Thiamine and Niacin</td>
+                <td>histidine, lysine, methionine, phenylalanine, threonine, tryptophan, and valine</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Quinoa </td>
+                <td><em>Chenopodium quinoa </em></td>
+                <td>21gm/100gms of seed</td>
+                <td>12.9% to 16.5%</td>
+                <td>vitamins C, vitamin E and Thiamine </td>
+                <td>Calcium, Iron, Phosphorus, Potassium, and Magnesium</td>
+                <td>Phenylalanine, Leucine, Methionine, Tryptophan and Valine</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Teff/td>
+                <td><em>Eragrostis tef</em></td>
+                <td>80% </td>
+                <td>9.4–13.3%  </td>
+                <td>Vitamins A, vitamin C and niacin.</td>
+                <td>Iron, Calcium, Zinc and Magnesium</td>
+                <td>glutamic acid/glutamine, threonine and valine</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Chia</td>
+                <td><em>Salvia hispanica</em></td>
+                <td>42%</td>
+                <td>15% to 23%</td>
+                <td>Thiamine, Riboflavin, Vitamin C, Niacin, Vitamin A, and Vitamin E (α-tocopherol)</td>
+                <td>Calcium, Iron, Phosphorus, Potassium, Magnesium, Zinc, Sodium, Manganese and Copper.</td>
+                <td>leucine, valine, phenylalanine, lysine, isoleucine, threonine, histidine and methionine</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Buckwheat</td>
+                <td><em>Fagopyrum esculentum</em></td>
+                <td>20%</td>
+                <td>8.06–12.44%</td>
+                <td>vitamin A, thiamine, riboflavin, niacin, pantothenic acid, pyridoxine, vitamin C and vitamin E  </td>
+                <td>Magnesium, Manganese, Copper and Phosphorus</td>
+                <td>glutamic acid, aspartic acid, arginine, leucine, and lysine</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Ancient Wheat</td>
+                <td><em>Triticum spp.</em></td>
+                <td>65-75%</td>
+                <td>13.68% </td>
+                <td>vitamin B6</td>
+                <td>Magnesium, Phosphorus, Selenium, Zinc, and Iron</td>
+                <td>Proline and glutamine</td>
+            <tr>
+                <td>9</td>
+                <td>Fonio</td>
+                <td><em>Digitaria exilis</em></td>
+                <td>72.89%</td>
+                <td>2 grams of protein per 100 grams </td>
+                <td>Thiamine, Riboflavin, Niacin</td>
+                <td>Iron, Zinc, Calcium, Potassium and Sulphur</td>
+                <td>Phenylalanine, Histidine, Isoleucine, Tryptophan, Threonine</td>
+            <tr>
+                <td>10</td>
+                <td>Job’s tears</td>
+                <td><em>Coix lacryma-jobi</em></td>
+                <td>61 gm/ 100gms of seed</td>
+                <td>14%</td>
+                <td>Thiamine, Riboflavin, Vitamin E, and NiacinThiamine, Riboflavin, Vitamin E, and Niacin</td>
+                <td>Zinc, Calcium and Phosphorus</td>
+                <td>Arginine, Glycine, Glutamic acid, Cystine</td>
+        </tbody>
+    </table>
+</section>
+<!-- Footer Section -->
+<div id="footer"></div> <!-- Footer will be dynamically loaded here -->
+<script>
+    // Load Header
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('header').innerHTML = data);
+
+    // Load Footer
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('footer').innerHTML = data);
+</script> <!-- Link to your JavaScript file -->
+
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Add your CSS file -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>About Us</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f3f0f0;
+        }
+        
+        .about-section {
+            display: flex;
+            justify-content: space-between; /* Ensure proper spacing between text and image */
+            align-items: center; /* Center align text and image vertically */
+            margin: 20px auto; /* Space from top and bottom */
+            padding: 20px;
+            max-width: 1400px; /* Set a maximum width for the section */
+            border-radius: 8px;
+            background-color: #f3f0f0;
+        }
+        
+        .about-section:first-of-type {
+            margin-top: 150px; /* Space from the top to avoid header overlap */
+        }
+        
+        .container {
+            flex: 1; /* Allow the text container to take up more space */
+            padding-right: 20px; /* Space between text and image */
+        }
+        
+        .container h1 {
+            font-size: 32px;
+            font-weight: bold;
+            color: #008cb3;
+            margin-bottom: 15px;
+        }
+        
+        .container p {
+            width: 70%;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 0px;
+            text-align: justify;
+        }
+        
+        .about-section img {
+            flex: 1; /* Allow the image to adapt to available space */
+            max-width: 400px; /* Set a maximum width for the image */
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+        }
+        #header {
+            position: fixed; /* Keep the header fixed at the top */
+            top: 0;
+            left: 0;
+            width: 100%; /* Full width of the screen */
+            z-index: 1000; /* Keep it above other elements */
+            background-color: #fff; /* Optional: Add a background color */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for visibility */
+        }
+        /* Section Styles */
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+
+.about-container {
+    display: flex;
+    gap: 0px;
+    max-width: 1300px;
+    width: 100%;
+    position: relative;
+}
+
+/* Left Image Section */
+.about-image {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+}
+
+.about-image img {
+    margin-left: 7rem;
+    margin-top: 4rem;
+    width: 70%;
+    border-radius: 8px;
+}
+
+/* Connector Lines */
+.connector-lines {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    height: 100%;
+    width: 50px;
+}
+
+.connector-lines .line {
+    position: absolute;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #ccc;
+}
+
+.connector-lines .line::after {
+    content: "";
+    position: absolute;
+    right: -5px;
+    top: -4px;
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+}
+
+/* Right Content Section */
+.about-content {
+    flex: 1;
+    position: relative;
+}
+
+.about-title {
+    font-size: 2.5rem;
+    color: #0033cc;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.about-subtitle {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-list {
+    font-size: 1.6rem;
+    list-style: none;
+    counter-reset: list-counter;
+}
+
+.about-list li {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 35px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.number-box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    background-color: #ccc;
+    color: #000;
+    border-radius: 4px;
+    font-weight: bold;
+    counter-increment: list-counter;
+}
+
+.about-list a {
+    color: #0033cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.about-list a:hover {
+    text-decoration: underline;
+}
+
+        
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div id="header"></div> <!-- Header will be dynamically loaded here -->
+    <!-- About Content Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h1 style="text-align: center;">The Versatility of Millets</h1>
+            <h2>Diverse Adaptability</h2>
+            <p>
+                Millets are a remarkably versatile 
+                group of small-seeded grasses that 
+                can thrive in a wide range of environments,
+                 from arid regions to tropical climates. These
+                  hardy crops are well-suited to cope with the 
+                  challenges posed by climate change, including
+                   drought, heat, and poor soil conditions.
+
+            </p>
+        </div>
+    </section>
+    
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>Nutritional Powerhouses</h2>
+            <p>Millets are nutritional powerhouses, packed
+                with essential vitamins, minerals, and fiber. 
+                They are particularly rich in protein, calcium, 
+                iron, and antioxidants, making them a valuable 
+                addition to any healthy diet. Millets also have a 
+                low glycemic index, making them a suitable option 
+                for those with diabetes or those seeking to manage 
+                their blood sugar levels.
+
+            </p>
+        </div>
+    </section>
+    <section id="about" class="about-section">
+        <div class="container">
+            <p>
+                <strong style="font-size: 2rem; text-decoration:underline;"> Rediscovering the Power of Millets and Ancient Grains</strong>
+                <br><br>
+                Millets and ancient grains have long been the foundation of 
+                sustainable food systems, nourishing communities across the globe.
+                 Yet, in recent decades, these resilient and nutritious crops have
+                  been overshadowed by the rise in intensive mono-cropping. However,
+                   with the mounting challenges of climate change, food insecurity, 
+                   and health crises, the millets and ancient grans are rediscovered 
+                   for their incredible potential. This initiative, MAHARISHI, aims to 
+                   revive and elevate millets and ancient grains, empowering farmers,
+                    improving nutrition, and fostering a more sustainable future for all.
+                    <br><br>
+                    Millets are the most versatile crops which can be 
+                grown in diverse agroclimatic condition. These crops
+                 have wide adaptation and most suited for the current
+                  agrarian vulnerabilities viz. climate change, drought, 
+                  depleting natural resources, rise in CO2 and temperature etc. 
+                  \Paleo-botanical studies revealed that millets and other ancient 
+                  \crops were the first choice of the early human settlers worldwide.
+                   Most of the millets and the ancient grain crops are C4, which means
+                   \ they have better water, nutrient and radiation use efficiency. They
+                    are also resilient to abiotic stress and resistance to pest and diseases.
+
+            </p>
+        </div>
+    </section>
+    
+
+    
+    <section class="about-section">
+        <div class="about-container">
+            <!-- Left Section: Image -->
+            <div class="about-image">
+                <img src="images/about_image.png" alt="Global Research Illustration">
+            </div>
+            <!-- Right Section: Content -->
+            <div class="about-content">
+                <h1 class="about-title" style="margin-left: 2rem;">MAHARISHI</h1>
+                <h2 class="about-subtitle" style="margin-left: 2rem;">Objectives</h2>
+                <ol class="about-list">
+                    <li>
+                        <span class="number-box">1</span>
+                        Establish mechanisms to 
+                        <a href="#">connect researchers</a> and institutions working on identified crops to enhance the 
+                        <a href="#">dissemination</a> of research findings and information, and identify research gaps and needs.
+                    </li>
+                    <li>
+                        <span class="number-box">2</span>
+                        Establish web platforms to connect researchers, deliver information periodically and 
+                        <a href="#">share</a> communication products, and thematic briefs to encourage research and awareness.
+                    </li>
+                    <li>
+                        <span class="number-box">3</span>
+                        Organizing knowledge transfer, on voluntary and mutually agreed terms, capacity-building activities, and international research 
+                        <a href="#">workshops and conferences</a>.
+                    </li>
+                    <li>
+                        <span class="number-box">4</span>
+                        Provide research and innovation prizes or awards to young scientists to support their research interests. Also support 
+                        <a href="#">open access publication of research results</a>.
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    
+   
+
+    <!-- Footer Section -->
+    <div id="footer"></div> <!-- Footer will be dynamically loaded here -->
+    <script>
+        // Load Header
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        // Load Footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script> <!-- Link to your JavaScript file -->
+</body>
+</html>

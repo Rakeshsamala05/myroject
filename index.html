@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Maharishi</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Header -->
+    <div id="header"></div>
+    <!-- Main Section -->
+    <section id="home" class="home-hero">
+        <img src="images/millet3.jpg" alt="Hero Background" class="home-hero__image">
+        <div class="home-hero__content">
+            <p class="custom-text">
+                COORDINATING RESEARCH UNDER<br>MAHARISHI<br>
+                <button class="custom-button">MILLETS</button>
+                <div>hiii everyone</div>
+            </p>
+            <marquee style="width: 70%; margin: 0 auto;  color: #333;" scrollamount="10"><h1 class="custom-text2">Rediscovering the Power of Millets and Ancient Grains
+            </h1></marquee>
+        </div>
+    </section>
+    <section id="latest-updates" class="container py-5">
+        <h2 class="text-dark fs-1 text-start">LATEST UPDATES</h2>
+        <div class="scroll-container">
+            <div class="scroll-content">
+                <!-- Original Cards -->
+                <div class="scroll-item">
+                    <div class="card h-100">
+                        <img src="images/finger millet.jpg" class="card-img-top" alt="Update 1">
+                        <div class="card-body">
+                            <h5 class="card-title fs-2 fw-bold custom-color">Finger Millet</h5>
+                            <p class="card-text">Finger millet, a resilient and nutrient-dense grain, thrives in dry and high-altitude regions.</p>
+                            <a href="javascript:void(0)" class="btn btn-primary py-3 px-4 fs-4" 
+                            onclick="openSidePanel('images/finger_millet_Panel.png', 'Finger millet originated in East Africa (Ethiopian and Ugandan highlands). It was claimed to have been found in an Indian archaeological site dated to 1800 BCE (Late Bronze Age); however, this was subsequently demonstrated to be incorrectly identified cleaned grains of hulled millets. The oldest record of <b>finger millet</b> comes from an archaeological site in Africa dating to the 3rd millennium B.C. By 1996, cultivation of <b>finger millet</b> in Africa was declining rapidly because of the large amount of labor it required, with farmers preferring to grow nutritionally-inferior but less labor-intensive crops such as maize, sorghum, and cassava. Such a decline was not seen in Asia, however.')">
+                             More
+                         </a>
+                         
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-item">
+                    <div class="card h-100">
+                        <img src="images/sorghum.png" class="card-img-top" alt="Update 2">
+                        <div class="card-body">
+                            <h5 class="card-title fs-2 fw-bold custom-color">Sorghum</h5>
+                            <p class="card-text">It is packed with fiber, protein, and essential minerals, making it a healthy staple in many
+                                traditional cuisines.</p>
+                            <a href="javascript:void(0)" class="btn btn-primary py-3 px-4 fs-4" onclick="openSidePanel('images/Sorghum_Panel.jpg', `Sorghum bicolor, commonly called sorghum and also known as great millet, broomcorn, guinea corn, durra, imphee, jowar, or milo, is a species in the grass genus Sorghum cultivated for its grain. The grain is used for food for humans the plant is used for animal feed and ethanol production. Sorghum originated in Africa, and is now cultivated widely in tropical and subtropical regions.
+Sorghum is the world's fifth-most important cereal crop after rice, wheat, maize, and barley. Sorghum is typically an annual, but some cultivars are perennial. It grows in clumps that may reach over 4 metres (13 ft) high. The grain is small, 2 to 4 millimetres (0.08 to 0.2 in) in diameter. Sweet sorghums are cultivars primarily grown for forage, syrup production, and ethanol; they are taller than those grown for grain.
+`)">More</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-item">
+                    <div class="card h-100">
+                        <img src="images/mm.jpg" class="card-img-top" alt="Update 3">
+                        <div class="card-body">
+                            <h5 class="card-title fs-2 fw-bold custom-color">pearl Millet</h5>
+                            <p class="card-text">Pearl millet, a hardy and nutritious grain, thrives in hot and arid climates.</p>
+                            <a href="javascript:void(0)" class="btn btn-primary py-3 px-4 fs-4" onclick="openSidePanel('images/Pearl_millet_Panel.png', 'Pearl millet (Cenchrus americanus, commonly known as the synonym Pennisetum glaucum) is the most widely grown type of millet. It has been grown in Africa and the Indian subcontinent since prehistoric times. The center of diversity, and suggested area of domestication, for the crop is in the Sahel zone of West Africa. Recent archaeobotanical research has confirmed the presence of domesticated pearl millet on the Sahel zone of northern Mali between 2500 and 2000 BC. 2023 was the International Year of Millets, declared by the United Nations General Assembly in 2021. ')">More</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-item">
+                    <div class="card h-100">
+                        <img src="images/proso_millet.jpg" class="card-img-top" alt="Update 3">
+                        <div class="card-body">
+                            <h5 class="card-title fs-2 fw-bold custom-color">Proso Millet</h5>
+                            <p class="card-text">Proso millet, a drought-tolerant and fast-growing grain, thrives in a variety of climates.</p>
+                            <a href="javascript:void(0)" class="btn btn-primary py-3 px-4 fs-4" onclick="openSidePanel('images/Proso_millet_Panel.png',  `Panicum miliaceum is a grain crop with many common names, including proso millet, broomcorn millet, common millet, hog millet, Kashfi millet, red millet, and white millet. Archaeobotanical evidence suggests millet was first domesticated about 10,000 BP in Northern China. Major cultivated areas include Northern China, Himachal Pradesh of India, Nepal, Russia, Ukraine, Belarus, the Middle East, Turkey, Romania, and the Great Plains states of the United States. About 500,000 acres (200,000 hectares) are grown each year.[better source needed] The crop is notable both for its extremely short lifecycle, with some varieties producing grain only 60 days after planting, and its low water requirements, producing grain more efficiently per unit of moisture than any other grain species tested.`)">More</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-item">
+                    <div class="card h-100">
+                        <img src="images/FOXTAIL.jpg" class="card-img-top" alt="Update 3">
+                        <div class="card-body">
+                            <h5 class="card-title fs-2 fw-bold custom-color">Fox Millet</h5>
+                            <p class="card-text">Foxtail millet, a hardy grain, thrives in semi-arid regions and is easily digestible.</p>
+                            <a href="javascript:void(0)" class="btn btn-primary py-3 px-4 fs-4" onclick="openSidePanel('images/foxtail_Panel.png',  `Foxtail millet, scientific name Setaria italica (synonym Panicum italicum L.), is an annual grass grown for human food. It is the second-most widely planted species of millet, and the most grown millet species in Asia. The oldest evidence of foxtail millet cultivation was found along the ancient course of the Yellow River in Cishan, China, carbon dated to be from around 8,000 years before present.Foxtail millet has also been grown in India since antiquity.`)">More</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-item">
+                    <div class="card h-100">
+                        <img src="images/KODO MILLET.jpg" class="card-img-top" alt="Update 3">
+                        <div class="card-body">
+                            <h5 class="card-title fs-2 fw-bold custom-color">Kodo Millet</h5>
+                            <p class="card-text">Kodo millet, a resilient and nutrient-rich grain, thrives in dry regions. It is high in fiber, protein,
+                                and antioxidants, supporting digestion and overall health.</p>
+                            <a href="javascript:void(0)" class="btn btn-primary py-3 px-4 fs-4" onclick="openSidePanel('images/KODO_millet_Panel.png',  `Paspalum scrobiculatum, commonly called kodo millet or koda millet, is an annual grain that is grown primarily in Nepal (not to be confused with ragi (finger millet, Eleusine coracana)) and also in India, Philippines, Indonesia, Vietnam, Thailand, and in West Africa from where it originated. It is grown as a minor crop in most of these areas, with the exception of the Deccan plateau in India where it is grown as a major food source. It is a very hardy crop that is drought tolerant and can survive on marginal soils where other crops may not survive, and can supply 450–900 kg of grain per hectare. Kodo millet has large potential to provide nourishing food to subsistence farmers in Africa and elsewhere.`)">More</a>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Duplicate Cards -->
+                <div class="scroll-item">
+                    <div class="card h-100">
+                        <img src="images/finger millet.jpg" class="card-img-top" alt="Update 1">
+                        <div class="card-body">
+                            <h5 class="card-title fs-2 fw-bold custom-color">Finger Millet</h5>
+                            <p class="card-text">Finger millet, a resilient and nutrient-dense grain, thrives in dry and high-altitude regions.</p>
+                            <a href="javascript:void(0)" class="btn btn-primary py-3 px-4 fs-4" onclick="openSidePanel('images/finger_millet_Panel.png', 'Finger millet originated in East Africa (Ethiopian and Ugandan highlands). It was claimed to have been found in an Indian archaeological site dated to 1800 BCE (Late Bronze Age); however, this was subsequently demonstrated to be incorrectly identified cleaned grains of hulled millets. The oldest record of finger millet comes from an archaeological site in Africa dating to the 3rd millennium B.C. By 1996, cultivation of finger millet in Africa was declining rapidly because of the large amount of labor it required, with farmers preferring to grow nutritionally-inferior but less labor-intensive crops such as maize, sorghum, and cassava. Such a decline was not seen in Asia, however.')">More</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-item">
+                    <div class="card h-100">
+                        <img src="images/sorghum.png" class="card-img-top" alt="Update 2">
+                        <div class="card-body">
+                            <h5 class="card-title fs-2 fw-bold custom-color">Sorghum</h5>
+                            <p class="card-text">It is packed with fiber, protein, and essential minerals, making it a healthy staple in many
+                                traditional cuisines.</p>
+                            <a href="javascript:void(0)" class="btn btn-primary py-3 px-4 fs-4" onclick="openSidePanel('images/Sorghum_Panel.jpg', `Sorghum bicolor, commonly called sorghum and also known as great millet, broomcorn, guinea corn, durra, imphee, jowar, or milo, is a species in the grass genus Sorghum cultivated for its grain. The grain is used for food for humans the plant is used for animal feed and ethanol production. Sorghum originated in Africa, and is now cultivated widely in tropical and subtropical regions.
+Sorghum is the world's fifth-most important cereal crop after rice, wheat, maize, and barley. Sorghum is typically an annual, but some cultivars are perennial. It grows in clumps that may reach over 4 metres (13 ft) high. The grain is small, 2 to 4 millimetres (0.08 to 0.2 in) in diameter. Sweet sorghums are cultivars primarily grown for forage, syrup production, and ethanol; they are taller than those grown for grain.
+`)">More</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-item">
+                    <div class="card h-100">
+                        <img src="images/mm.jpg" class="card-img-top" alt="Update 3">
+                        <div class="card-body">
+                            <h5 class="card-title fs-2 fw-bold custom-color">pearl Millet</h5>
+                            <p class="card-text">Pearl millet, a hardy and nutritious grain, thrives in hot and arid climates.</p>
+                            <a href="javascript:void(0)" class="btn btn-primary py-3 px-4 fs-4" onclick="openSidePanel('images/Pearl_millet_Panel.png', 'Pearl millet (Cenchrus americanus, commonly known as the synonym Pennisetum glaucum) is the most widely grown type of millet. It has been grown in Africa and the Indian subcontinent since prehistoric times. The center of diversity, and suggested area of domestication, for the crop is in the Sahel zone of West Africa. Recent archaeobotanical research has confirmed the presence of domesticated pearl millet on the Sahel zone of northern Mali between 2500 and 2000 BC. 2023 was the International Year of Millets, declared by the United Nations General Assembly in 2021. ')">More</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-item">
+                    <div class="card h-100">
+                        <img src="images/proso_millet.jpg" class="card-img-top" alt="Update 3">
+                        <div class="card-body">
+                            <h5 class="card-title fs-2 fw-bold custom-color">Proso Millet</h5>
+                            <p class="card-text">Proso millet, a drought-tolerant and fast-growing grain, thrives in a variety of climates.</p>
+                            <a href="javascript:void(0)" class="btn btn-primary py-3 px-4 fs-4" onclick="openSidePanel('images/Proso_millet_Panel.png',  `Panicum miliaceum is a grain crop with many common names, including proso millet, broomcorn millet, common millet, hog millet, Kashfi millet, red millet, and white millet. Archaeobotanical evidence suggests millet was first domesticated about 10,000 BP in Northern China. Major cultivated areas include Northern China, Himachal Pradesh of India, Nepal, Russia, Ukraine, Belarus, the Middle East, Turkey, Romania, and the Great Plains states of the United States. About 500,000 acres (200,000 hectares) are grown each year.[better source needed] The crop is notable both for its extremely short lifecycle, with some varieties producing grain only 60 days after planting, and its low water requirements, producing grain more efficiently per unit of moisture than any other grain species tested.`)">More</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-item">
+                    <div class="card h-100">
+                        <img src="images/FOXTAIL.jpg" class="card-img-top" alt="Update 3">
+                        <div class="card-body">
+                            <h5 class="card-title fs-2 fw-bold custom-color">Fox Millet</h5>
+                            <p class="card-text">Foxtail millet, a hardy grain, thrives in semi-arid regions and is easily digestible.</p>
+                            <a href="javascript:void(0)" class="btn btn-primary py-3 px-4 fs-4" onclick="openSidePanel('images/foxtail_Panel.png',  `Foxtail millet, scientific name Setaria italica (synonym Panicum italicum L.), is an annual grass grown for human food. It is the second-most widely planted species of millet, and the most grown millet species in Asia. The oldest evidence of foxtail millet cultivation was found along the ancient course of the Yellow River in Cishan, China, carbon dated to be from around 8,000 years before present.Foxtail millet has also been grown in India since antiquity.`)">More</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-item">
+                    <div class="card h-100">
+                        <img src="images/KODO MILLET.jpg" class="card-img-top" alt="Update 3">
+                        <div class="card-body">
+                            <h5 class="card-title fs-2 fw-bold custom-color">Kodo Millet</h5>
+                            <p class="card-text">Kodo millet, a resilient and nutrient-rich grain, thrives in dry regions. It is high in fiber, protein,
+                                and antioxidants, supporting digestion and overall health.</p>
+                            <a href="javascript:void(0)" class="btn btn-primary py-3 px-4 fs-4" onclick="openSidePanel('images/KODO_millet_Panel.png',  `Paspalum scrobiculatum, commonly called kodo millet or koda millet, is an annual grain that is grown primarily in Nepal (not to be confused with ragi (finger millet, Eleusine coracana)) and also in India, Philippines, Indonesia, Vietnam, Thailand, and in West Africa from where it originated. It is grown as a minor crop in most of these areas, with the exception of the Deccan plateau in India where it is grown as a major food source. It is a very hardy crop that is drought tolerant and can survive on marginal soils where other crops may not survive, and can supply 450–900 kg of grain per hectare. Kodo millet has large potential to provide nourishing food to subsistence farmers in Africa and elsewhere.`)">More</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="latest-updates" class="container py-5">
+        <h2 class="text-dark fs-1 text-start">HIGHLIGHTS</h2>
+        <div class="row">
+            <!--Update 1-->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="icons/employee.png" class="card-img-top" alt="Update 1">
+                    <div class="card-body">
+                        <h5 class="card-title fs-2 fw-bold custom-color">Update Title 1</h5>
+                        <p class="card-text">This is a brief description of the latest update or event. Learn more about our recent achievements and activities.</p>
+                        <a href="#" class="btn btn-primary py-3 px-4 fs-4">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="icons/crop_image.png" class="card-img-top" alt="Update 1">
+                    <div class="card-body">
+                        <h5 class="card-title fs-2 fw-bold custom-color">Update Title 2</h5>
+                        <p class="card-text">This is a brief description of the latest update or event. Learn more about our recent achievements and activities.</p>
+                        <a href="#" class="btn btn-primary py-3 px-4 fs-4">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="icons/video_image.png" class="card-img-top" alt="Update 1">
+                    <div class="card-body">
+                        <h5 class="card-title fs-2 fw-bold custom-color">Update Title 3</h5>
+                        <p class="card-text">This is a brief description of the latest update or event. Learn more about our recent achievements and activities.</p>
+                        <a href="#" class="btn btn-primary py-3 px-4 fs-4">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="lates-news">
+        <video autoplay muted loop>
+          <source src="images/millets_video.mp4" type="video/mp4">
+        </video>
+    
+        <!-- Text Blocks -->
+        <div class="container">
+          <div class="row gx-4 justify-content-center">
+            <!-- Block 1 -->
+            <div class="col-md-4 mb-4 text-center">
+              <p>This is the description of the first update. Learn more about our recent projects and achievements.</p>
+              <a href="#" class="btn btn-primary py-2 px-3">Learn More</a>
+            </div>
+            
+            <!-- Block 2 -->
+            <div class="col-md-4 mb-4 text-center">
+              <p>This is the description of the second update. Learn more about our initiatives and upcoming events.</p>
+              <a href="#" class="btn btn-primary py-2 px-3">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="logo-section">
+        <div class="container">
+          <div class="row justify-content-center text-center">
+            <div class="col-12 mb-4">
+
+
+
+              <h3 class="fw-bold">Companies Logo section</h3>
+            </div>
+            <div class="col-12 logo-container d-flex justify-content-center flex-wrap">
+              <img src="images/millet1.jpg" alt="Company 1 Logo">
+              <img src="images/millet1.jpg" alt="Company 2 Logo">
+              <img src="images/millet1.jpg" alt="Company 3 Logo">
+              <img src="images/millet1.jpg" alt="Company 4 Logo">
+              <img src="images/millet1.jpg" alt="Company 5 Logo">
+              <img src="images/millet1.jpg" alt="Company 1 Logo">
+              <img src="images/millet1.jpg" alt="Company 1 Logo">
+
+            </div>
+          </div>
+        </div>
+      </section>
+    <!-- Side Panel -->
+  <div id="sidePanel" class="side-panel">
+    <button class="close-btn" onclick="closeSidePanel()">&times;</button>
+    <h2>More Information</h2>
+    <img id="panelImage" class="panel-image" src="" alt="Panel Image">
+    <p id="panelText" class="panel-text"></p>
+  </div>
+
+  <!-- Overlay -->
+  <div id="overlay" class="overlay" onclick="closeSidePanel()"></div>
+    <!-- Footer -->
+    <div id="footer"></div>
+    <!-- Include Components -->
+    <script>
+        // Load Header
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        // Load Footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+
+            function openSidePanel(imageSrc, textContent) {
+                const panel = document.getElementById("sidePanel");
+                const overlay = document.getElementById("overlay");
+                const panelImage = document.getElementById("panelImage");
+                const panelText = document.getElementById("panelText");
+          
+                // Set the image source and text content dynamically
+                panelImage.src = imageSrc;
+                panelText.textContent = textContent;
+          
+                // Open the panel and show the overlay
+                panel.classList.add("open");
+                overlay.classList.add("show");
+              }
+          
+              function closeSidePanel() {
+                const panel = document.getElementById("sidePanel");
+                const overlay = document.getElementById("overlay");
+          
+                // Close the panel and hide the overlay
+                panel.classList.remove("open");
+                overlay.classList.remove("show");
+              }
+              
+    </script>
+
+    
+    
+</body>
+</html>

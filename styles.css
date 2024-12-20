@@ -1,0 +1,643 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+Inside media queries 1em is always 16px i.e 1em = 16px at every screen size only inside media queries
+*/
+*,
+*::after,
+*::before{
+    margin:0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: inherit;
+}
+* {
+    font-family:sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+@media only sccreen and (max-width:75em) {
+    html{font-size: 59%;}}
+@media only screen and (max-width:56.25em) {
+    html{ font-size: 56%;}}
+@media only screen and (min-width:112.5em){
+    html{font-size: 65%;}}
+
+.header{
+    position:fixed;
+    width:100%;
+    z-index:1000;
+    background:#f1e8d7;
+    box-shadow: 0 10px 100px rgba(0, 0, 0, 0.1);
+}
+.header__content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 5rem;
+}
+@media only screen and (max-width:56.25em){
+    .header__content{
+        padding: 0 2rem;
+    }
+}
+.header__logo-container{
+    margin-left: -4rem;
+    display: flex;
+    align-items: center;
+    cursor:pointer;
+    color:#333;
+    transition: color .3s;
+}
+.header__logo-container:hover{
+    color:#008cb3;
+}
+.header__logo-img-cont{
+    width:9rem;
+    height:9rem;
+    overflow: hidden;
+    margin-right:1.5rem;
+    background:blue;
+}
+@media only screen and (max-width:56.25em){
+    .header__logo-img-cont{
+        width:4.5rem;
+        height: 4.5rem;
+        margin-right: 1.2rem;
+    }
+}
+.header__logo-img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    display: block;
+ }
+  .header__logo-sub {
+    font-size: 2.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding-left: 30px;
+   }
+  .header__links {
+    display: flex;
+    justify-content: space-between; 
+    padding: 0;
+    margin: 0; }
+    @media only screen and (max-width: 37.5em) {
+      .header__links {
+        display: none; } }
+  .header__link {
+    text-decoration: none !important;
+    padding: 2rem 1rem;
+    display: inline-block;
+    font-size: 1.6rem;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    transition: color .3s; }
+    .header__link:hover {
+      color: #008cb3; }
+  @media only screen and (max-width: 56.25em) {
+      .header__link {
+        padding: 3rem 1.8rem;
+        font-size: 1.5rem; } }
+  /* Hamburger container */
+.header__main-ham-menu-cont {
+    display: none;
+    width: 3rem;
+    padding: 0; /* Adjusted for alignment */
+}
+
+@media only screen and (max-width: 37.5em) {
+    .header__main-ham-menu-cont {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Hamburger button */
+.header__main-ham-menu {
+    display: block;
+    width: 100%;
+}
+
+/* Close button */
+.header__main-ham-menu-close {
+    display: flex; /* Hidden by default */
+    width: 100%;
+}
+
+/* Utility class for toggling */
+.d-none {
+    display: none !important;
+}
+
+  .header__sm-menu {
+    background: #FFF8DC;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1); }
+    .header__sm-menu--active {
+      visibility: hidden;
+      opacity: 0; }
+      @media only screen and (max-width: 37.5em) {
+        .header__sm-menu--active {
+          visibility: visible;
+          opacity: 1; } }
+  .header__sm-menu-link a {
+    display: block;
+    text-decoration: none;
+    padding: 2.5rem 3rem;
+    font-size: 1.6rem;
+    color: #333;
+    text-align: right;
+    border-bottom: 1px solid #eee;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color .3s; }
+    .header__sm-menu-link a:hover {
+      color: #0062b9; }
+  .header__sm-menu-link:first-child a {
+    border-top: 1px solid #eee; }
+  .header__sm-menu-link-last {
+    border-bottom: 0; }
+
+
+body{
+    box-sizing: border-box;
+    position: relative;
+    line-height: 1.5;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+li{
+    list-style:none
+}
+input:focus,
+button:focus,
+a:focus,
+textarea:focus {
+  outline: none; }
+
+/* Hero Section */
+.home-hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+/* Hero Image */
+.home-hero__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensures image fits horizontally */
+    height: 100%; /* Ensures image fits vertically */
+    object-fit: cover; /* Crops the image to cover the container */
+    z-index: -1; /* Sends the image behind the content */
+    filter: blur(0px);
+}
+
+/* Hero Content */
+.home-hero__content {
+    position: relative;
+    text-align: center;
+    padding: 1rem;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.custom-text { 
+    color: #ffffff !important; /* Force black */
+    font-size: 4rem;
+    line-height: 1.6;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow for readability */
+    margin: 0 auto;
+    max-width: 80%;
+    text-align: left;
+    padding:0;
+    font-weight:bolder;
+}
+.custom-text2{
+    color: #ffffff !important; /* Force black */
+    margin: 0 auto;
+    font-size: 3rem;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 80%;
+    padding-top: 100px;
+    font-weight:bolder;
+}
+
+/* Responsive Adjustments */
+/* Responsive Adjustments */
+@media only screen and (max-width: 37.5em) {
+    .home-hero {
+        height: auto; /* Allow the height to adjust based on content */
+        padding: 14rem 1rem; /* Add balanced padding */
+        display: flex;
+        flex-direction: column; /* Stack content vertically */
+        justify-content: center;
+        align-items: center; /* Center content horizontally */
+    }
+
+    .home-hero__image {
+        width: 100%; /* Ensure the image spans the width of the container */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover; /* Keep the image covered within its container */
+        filter: blur(2px); /* Reduce blur for smaller screens */
+    }
+
+    .home-hero__content {
+        position: relative; /* Ensure content stays on top of the image */
+        padding: 1rem; /* Adjust padding for smaller screens */
+        text-align: center;
+    }
+
+    .custom-text {
+        font-size: 1.8rem; /* Scale text for readability */
+        line-height: 1.5; /* Adjust spacing between lines */
+        max-width: 90%; /* Limit text width for better readability */
+        color: #fff; /* Ensure text is visible against the background */
+        margin: 0 auto;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Improve text visibility */
+    }
+}
+
+/* Footer Styling */
+.main-footer {
+    background: #008cb3;
+    color: #fff;
+}
+
+/* Footer Upper Section */
+.main-footer__upper {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem;
+    position: relative; /* For positioning footer-icons */
+}
+
+@media only screen and (max-width: 56.25em) {
+    .main-footer__upper {
+        flex-direction: column;
+        align-items: center;
+        padding: 6rem 2rem;
+    }
+}
+
+@media only screen and (max-width: 37.5em) {
+    .main-footer__upper {
+        display: block;
+        text-align: center;
+    }
+}
+
+/* Footer Row 2 (Text Section) */
+.main-footer__row-2 {
+    width: 40%;
+    max-width: 50rem;
+    text-align: left;
+}
+
+@media only screen and (max-width: 56.25em) {
+    .main-footer__row-2 {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Footer Icons (Logos) */
+.footer-icons {
+    display: flex;
+    gap: 40px; /* Adds spacing between icons */
+    position: absolute;
+    top: 0px; /* Adjusts position to top */
+    right: 8rem; /* Aligns to the right */
+    margin-top: 0rem;
+}
+
+.footer-icon {
+    width: 80px; /* Adjust logo width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensures logos maintain proper aspect ratio */
+}
+
+/* Short Description Text */
+.main-footer__short-desc {
+    margin-top: 2rem;
+    color: #008cb3;
+    font-size: 1.5rem;
+    line-height: 1.7;
+}
+
+
+    
+        
+        
+.custom-button {
+            background-color: transparent; 
+            border: 2px solid white; 
+            border-radius: 0px; 
+            padding: 20px 150px; 
+            cursor: pointer; 
+            font-size: 25px; 
+            font-weight: bold; 
+            font-family: Arial, sans-serif; 
+            color: rgb(255, 255, 255); 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease; /* Smooth animation */
+        }
+        
+        .custom-button:hover {
+            background-color: white; /* White background on hover */
+            color: black; /* Black text remains on hover */
+            border: 2px solid white; /* Keep the border white */
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+        
+        .custom-button:active {
+            background-color: #fefefe; /* Light background on click */
+            color: black; /* Black text remains on click */
+            transform: translateY(0); /* Reset lift effect */
+        }
+#latest-updates {
+    background-color: #ffffff;
+    width: 100%;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+#latest-updates .text-dark{
+    color:#008cb3 !important ;
+}
+#latest-updates h2 {
+    font-size: 35px !important;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family:italic !important;
+}
+
+.card {
+    border: none !important; /* Removes borders from all cards */
+    margin-right: 50px; 
+}
+.update {
+    background-color: #f9f9f9; /* Light background for updates */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s ease;
+    text-align: center;
+}
+
+.update:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.update img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.update-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.update-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px 20px;
+    text-transform: uppercase;
+}
+p{
+    font-size: 18px;
+    text-align: justify;
+}
+.btn.btn-primary {
+            background-color: transparent; 
+            border: 2px solid #008cb3; 
+            border-radius: 10px; 
+            padding: 20px 150px; 
+            cursor: pointer; 
+            font-size: 25px; 
+            font-weight: bold; 
+            font-family: Arial, sans-serif; 
+            color: #008cb3; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease; /* Smooth animation */
+        }
+        
+        .btn.btn-primary:hover {
+            background-color: #008cb3; /* White background on hover */
+            color: rgb(255, 255, 255); /* Black text remains on hover */
+            border: 2px solid white; /* Keep the border white */
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+        
+        .btn.btn-primary:active {
+            background-color: transparent; /* Light background on click */
+            color: black; /* Black text remains on click */
+            transform: translateY(0); /* Reset lift effect */
+        }
+
+#latest-updates .custom-color{
+    color:#008cb3;
+}
+#lates-news {
+    position: relative;
+    height: 85vh; /* Full height of the viewport */
+    overflow: hidden;
+  }
+
+  #lates-news video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width of the viewport */
+    height: 100%; /* Full height of the viewport */
+    object-fit: cover; /* Ensures the video covers the entire area */
+    z-index: -1; /* Pushes the video to the background */
+  }
+
+  /* Text container styling */
+  #lates-news .container {
+    position: relative;
+    z-index: 1; /* Ensures content is above the video */
+    padding-top: 5%;
+    color: #fff; /* White text for contrast */
+  }
+
+  #lates-news p {
+    font-size: 2rem; /* Slightly larger text */
+    margin-top: 150px;
+  }
+
+  #lates-news .btn-primary {
+    background-color: transparent;
+    border: none;
+    border: 2px solid white;
+    color: white;
+    font-size: 2rem;
+    border-radius: 0;
+  }
+
+  #lates-news .btn-primary:hover {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+  }
+ 
+  /* Logo section styling */
+  #logo-section {
+    background-color: #f3f0f0;
+    padding: 140px 0;
+  }
+
+  #logo-section .logo-container img {
+    max-width: 200px; /* Adjust the size of the logos */
+    margin: 15px 15px; /* Add spacing between logos */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+  }
+
+  #logo-section .logo-container img:hover {
+    transform: scale(1); /* Slight zoom on hover */
+  }
+  .scroll-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.scroll-content {
+    display: flex;
+    animation: scroll-seamless 10s linear infinite;
+    will-change: transform;
+}
+
+.scroll-item {
+    flex: 0 0 25%; /* Adjust to fit 4 items in the container */
+}
+
+
+
+/* Pause scrolling when hovering */
+.scroll-content:hover {
+    animation-play-state: paused;
+}
+
+/* Keyframes for seamless scrolling */
+@keyframes scroll-seamless {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%); /* Scroll halfway to include the duplicate */
+    }
+}
+
+/* Side Panel Styles */
+.side-panel {
+    position: fixed;
+    right: -400px;
+    top: 0;
+    width: 400px;
+    height: 100%;
+    background-color: #f4f4f4;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    transition: 0.3s;
+    z-index: 1000;
+    overflow-y: auto;
+  }
+
+  .side-panel.open {
+    right: 0;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+  }
+
+  .overlay.show {
+    display: block;
+  }
+
+  .panel-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  .panel-text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+  }
