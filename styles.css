@@ -418,6 +418,9 @@ textarea:focus {
     border: none !important; /* Removes borders from all cards */
     margin-right: 50px; 
 }
+.card-img-top1 {
+    width: 80%;
+}
 .update {
     background-color: #f9f9f9; /* Light background for updates */
     padding: 20px;
