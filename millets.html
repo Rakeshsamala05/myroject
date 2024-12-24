@@ -9,291 +9,423 @@
     <title>About Us</title>
     <style>
         body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f3f0f0;
+            box-sizing: border-box;
         }
-        
-        .about-section {
+        .alternating-section {
             display: flex;
-            justify-content: space-between; /* Ensure proper spacing between text and image */
-            align-items: center; /* Center align text and image vertically */
-            margin: 20px auto; /* Space from top and bottom */
-            padding: 20px;
-            max-width: 1400px; /* Set a maximum width for the section */
-            border-radius: 8px;
-            background-color: #f3f0f0;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 0px;
+            background-color: #f9f9f9;
+            padding-top: 60px; /* Adds space from header */
         }
-        
-        .about-section:first-of-type {
-            margin-top: 150px; /* Space from the top to avoid header overlap */
+        .content-row {
+            padding-top: 55px;
+            padding-left:50px;
+            display: flex;
+            align-items: center;
+            margin: 10px 0; /* Reduced margin for less spacing between rows */
+            width: 100%;
+            max-width: 1200px;
+            gap: 20px;
         }
-        
-        .container {
-            flex: 1; /* Allow the text container to take up more space */
-            padding-right: 20px; /* Space between text and image */
+        .content-row.reverse {
+            flex-direction: row-reverse;
+            padding-right:50px;
         }
-        
-        .container h1 {
-            font-size: 32px;
-            font-weight: bold;
-            color: #008cb3;
-            margin-bottom: 15px;
+        .text {
+            flex: 1;
+            padding-top: 50px;
         }
-        
-        .container p {
-            width: 70%;
+        .text p {
             font-size: 18px;
             line-height: 1.6;
-            margin-bottom: 0px;
-            text-align: justify;
+            color: #333;
+            margin: 0;
+        }  
+        .section1{
+            font-size: 18px;
         }
+        .image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .content{
+            background-color: rgb(255, 255, 255);
+            margin-top: 30px;
         
-        .about-section img {
-            flex: 1; /* Allow the image to adapt to available space */
-            max-width: 400px; /* Set a maximum width for the image */
+        } 
+        .image img {
+            max-width: 50%;
             height: auto;
-            border-radius: 8px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+            border-radius: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        #header {
-            position: fixed; /* Keep the header fixed at the top */
-            top: 0;
-            left: 0;
-            width: 100%; /* Full width of the screen */
-            z-index: 1000; /* Keep it above other elements */
-            background-color: #fff; /* Optional: Add a background color */
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for visibility */
-        }
-        /* Section Styles */
-.about-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
-    background-color: #f9f9f9;
-    font-family: Arial, sans-serif;
-}
-
-.about-container {
-    display: flex;
-    gap: 0px;
-    max-width: 1300px;
-    width: 100%;
-    position: relative;
-}
-
-/* Left Image Section */
-.about-image {
-    position: relative;
-    max-width: 500px;
-    width: 100%;
-}
-
-.about-image img {
-    margin-left: 7rem;
-    margin-top: 4rem;
-    width: 70%;
-    border-radius: 8px;
-}
-
-/* Connector Lines */
-.connector-lines {
-    position: absolute;
-    top: 0;
-    left: 100%;
-    height: 100%;
-    width: 50px;
-}
-
-.connector-lines .line {
-    position: absolute;
-    left: 0;
-    width: 50px;
-    height: 2px;
-    background-color: #ccc;
-}
-
-.connector-lines .line::after {
-    content: "";
-    position: absolute;
-    right: -5px;
-    top: -4px;
-    width: 10px;
-    height: 10px;
-    background-color: #ccc;
-    border-radius: 50%;
-}
-
-/* Right Content Section */
-.about-content {
-    flex: 1;
-    position: relative;
-}
-
-.about-title {
-    font-size: 2.5rem;
-    color: #0033cc;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-.about-subtitle {
-    font-size: 1.8rem;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.about-list {
-    font-size: 1.6rem;
-    list-style: none;
-    counter-reset: list-counter;
-}
-
-.about-list li {
-    position: relative;
-    margin-bottom: 40px;
-    padding-left: 35px;
-    line-height: 1.6;
-    color: #555;
-}
-
-.number-box {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 24px;
-    height: 24px;
-    text-align: center;
-    line-height: 24px;
-    background-color: #ccc;
-    color: #000;
-    border-radius: 4px;
-    font-weight: bold;
-    counter-increment: list-counter;
-}
-
-.about-list a {
-    color: #0033cc;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.about-list a:hover {
-    text-decoration: underline;
-}
-
         
+        @media (max-width: 768px) {
+            .content-row {
+                flex-direction: column;
+                text-align: center;
+            }
+            .content-row.reverse {
+                flex-direction: column;
+            }
+        }
+        h1 {
+            font-size: 1.8rem;
+            text-align: center;
+            color: #1A73E8;
+            margin-bottom: 20px;
+        }
+
+        .table-container {
+            margin: 0 auto;
+            padding: 0px;
+            width: 100%;
+            height: 80%;
+            max-width: 1000px;
+            background-color: #f9f9f9;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            height: 100%; /* Ensure the table takes up the full height of the container */
+
+        }
+
+        th, td {
+            text-align: left;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #e6e6e6;
+            font-size: 18px;
+        }
+
+        td {
+            font-size: 18px;
+        }
+        .advantage-container {
+            margin: 0 auto;
+            max-width: 800px;
+            line-height: 1.6;
+        }
+
+        .advantage-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .advantage-item img {
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+        }
+
+        .advantage-item h3 {
+            font-size: 18px;
+            color: #1A73E8;
+            margin: 0;
+        }
+
+        .advantage-item p {
+            margin: 5px 0 0;
+            font-size: 16px;
+            color: #333333;
+        } 
+          .section1 {
+            border-left: 5px solid #333; /* Left border for sections */
+            padding-left: 15px;
+            margin-bottom: 20px;
+          }
+          
+          h2 {
+            margin-top: 0; /* Remove top margin from h2 */
+          }
+          .context{
+            margin-left: 2rem;
+          }
+          
     </style>
 </head>
 <body>
     <!-- Header Section -->
     <div id="header"></div> <!-- Header will be dynamically loaded here -->
     <!-- About Content Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <h1 style="text-align: center;">The Versatility of Millets</h1>
-            <h2>Diverse Adaptability</h2>
-            <p>
-                Millets are a remarkably versatile 
-                group of small-seeded grasses that 
-                can thrive in a wide range of environments,
-                 from arid regions to tropical climates. These
-                  hardy crops are well-suited to cope with the 
-                  challenges posed by climate change, including
-                   drought, heat, and poor soil conditions.
-
-            </p>
-        </div>
-    </section>
-    
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2>Nutritional Powerhouses</h2>
-            <p>Millets are nutritional powerhouses, packed
-                with essential vitamins, minerals, and fiber. 
-                They are particularly rich in protein, calcium, 
-                iron, and antioxidants, making them a valuable 
-                addition to any healthy diet. Millets also have a 
-                low glycemic index, making them a suitable option 
-                for those with diabetes or those seeking to manage 
-                their blood sugar levels.
-
-            </p>
-        </div>
-    </section>
-    <section id="about" class="about-section">
-        <div class="container">
-            <p>
-                <strong style="font-size: 2rem; text-decoration:underline;"> Rediscovering the Power of Millets and Ancient Grains</strong>
-                <br><br>
-                Millets and ancient grains have long been the foundation of 
-                sustainable food systems, nourishing communities across the globe.
-                 Yet, in recent decades, these resilient and nutritious crops have
-                  been overshadowed by the rise in intensive mono-cropping. However,
-                   with the mounting challenges of climate change, food insecurity, 
-                   and health crises, the millets and ancient grans are rediscovered 
-                   for their incredible potential. This initiative, MAHARISHI, aims to 
-                   revive and elevate millets and ancient grains, empowering farmers,
-                    improving nutrition, and fostering a more sustainable future for all.
-                    <br><br>
-                    Millets are the most versatile crops which can be 
-                grown in diverse agroclimatic condition. These crops
-                 have wide adaptation and most suited for the current
-                  agrarian vulnerabilities viz. climate change, drought, 
-                  depleting natural resources, rise in CO2 and temperature etc. 
-                  \Paleo-botanical studies revealed that millets and other ancient 
-                  \crops were the first choice of the early human settlers worldwide.
-                   Most of the millets and the ancient grain crops are C4, which means
-                   \ they have better water, nutrient and radiation use efficiency. They
-                    are also resilient to abiotic stress and resistance to pest and diseases.
-
-            </p>
-        </div>
-    </section>
-    
-
-    
-    <section class="about-section">
-        <div class="about-container">
-            <!-- Left Section: Image -->
-            <div class="about-image">
-                <img src="images/about_image.png" alt="Global Research Illustration">
+     <div class="context">
+    <section class="alternating-section">
+        <div class="content">
+        <div class="content-row">
+            <div class="text">
+                <p>Millets and ancient grains have
+                     long been the foundation of sustainable food systems,
+                      nourishing communities across the globe. Yet, in recent 
+                      decades, these resilient and nutritious crops have been 
+                      overshadowed by the rise in intensive mono-cropping. However,
+                       with the mounting challenges of climate change, food insecurity, 
+                       and health crises, the millets and ancient grans are rediscovered 
+                       for their incredible potential. This initiative, MAHARISHI, aims to
+                        revive and elevate millets and ancient grains, empowering farmers, 
+                        improving nutrition, and fostering a more sustainable future for all.</p>
             </div>
-            <!-- Right Section: Content -->
-            <div class="about-content">
-                <h1 class="about-title" style="margin-left: 2rem;">MAHARISHI</h1>
-                <h2 class="about-subtitle" style="margin-left: 2rem;">Objectives</h2>
-                <ol class="about-list">
-                    <li>
-                        <span class="number-box">1</span>
-                        Establish mechanisms to 
-                        <a href="#">connect researchers</a> and institutions working on identified crops to enhance the 
-                        <a href="#">dissemination</a> of research findings and information, and identify research gaps and needs.
-                    </li>
-                    <li>
-                        <span class="number-box">2</span>
-                        Establish web platforms to connect researchers, deliver information periodically and 
-                        <a href="#">share</a> communication products, and thematic briefs to encourage research and awareness.
-                    </li>
-                    <li>
-                        <span class="number-box">3</span>
-                        Organizing knowledge transfer, on voluntary and mutually agreed terms, capacity-building activities, and international research 
-                        <a href="#">workshops and conferences</a>.
-                    </li>
-                    <li>
-                        <span class="number-box">4</span>
-                        Provide research and innovation prizes or awards to young scientists to support their research interests. Also support 
-                        <a href="#">open access publication of research results</a>.
-                    </li>
-                </ol>
+            <div class="image">
+                <img src="millets_images/millet1.jpg" alt="Description for Image 1">
             </div>
         </div>
-    </section>
-    
-   
+        <div class="content-row reverse">
+            <div class="text">
+                 <div class="section1">
+                   <p>Sorghum is a hardy, drought-tolerant crop that can thrive in arid and semi-arid regions.</p>
+                 </div>
+                 <div class="section1">
+                   <h2>Versatile Culinary Uses</h2>
+                   <p>Sorghum can be used to make a variety of foods, from porridge and flatbread to beer and syrup.</p>
+                 </div>  
+                 <div class="section1">
+                   <h2>Nutritional Powerhouse</h2>
+                   <p>Sorghum is rich in fiber, protein, antioxidants, and micronutrients like iron and magnesium.</p>
+                 </div>
+                 <div class="section1">
+                   <h2>Sustainable Farming</h2>
+                   <p>water-efficient nature makes it a eco-friendly choice for farmers and consumers.</p>
+                 </div>
+                 
+            </div>
+            <div class="image">
+                <img src="millets_images/sorghum.jpg" alt="Description for Image 2">
+            </div>
+        </div>
+        <div class="content-row">
+            <div class="text">
+                  <div class="section1">
+                    <h2>High Calcium </h2>
+                    <p>Greater than 3000 ppm Ca for bone health</p>
+                  </div>
+                
+                  <div class="section1">
+                    <h2>Versatile Culinary Uses</h2>
+                    <p>Ragi-balls, porridges and modern breads can be made</p>
+                  </div>
+                  <div class="section1">
+                    <h2>Gluten Free</h2>
+                    <p>Naturally gluten free for those with celac diseases or gluten sensitivities</p>
+                  </div>
+                
+                  <div class="section1">
+                    <h2>Slow release carbohydrates</h2>
+                    <p>Slow release carbohydrates
+                        Helps regulate blood sugar levels</p>
+                  </div>
+            </div>
+            <div class="image">
+                <img src="millets_images/finger.png" alt="Description for Image 3">
+            </div>
+        </div>
+        <div class="content-row reverse">
+            <div class="text">
+                    <div class="section1">
+                      <h2>Nutritional Powerhouse</h2>
+                      <p>Proso millet's exceptional nutrient profile makes it a valuable addition to modern diets</p>
+                    </div>                 
+                    <div class="section1">
+                      <h2>Sustainable Agriculture
+                    </h2>
+                      <p>Short duration crop which can fit into any cropping system
+                    </p>
+                    </div>
+                  
+                    <div class="section1">
+                      <h2>Wide adaptation
+                    </h2>
+                      <p>Has wide adaptation from temperate to tropical climate
+                    </p>
+                    </div>
+                  
+                    <div class="section1">
+                      <h2>Diversified Food Systems
+                    </h2>
+                      <p>Embracing underutilized grains like proso millet can enhance food security and biodiversity</p>
+                    </div>
+            </div>
+            <div class="image">
+                <img src="millets_images/proso.jpg" alt="Description for Image 2">
+            </div>
+        </div>
+        <div class="content-row">
+            <div class="text">
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Foxtail millet</th>
+                                <th>Little millet</th>
+                                <th>Barnyard millet</th>
+                                <th>Kodo millet</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Wide adaptation: tropical to temperate</td>
+                                <td>High in energy and rich in antioxidants</td>
+                                <td>Gluten Free and Nutrient dense</td>
+                                <td>Anti-oxidants rich</td>
+                            </tr>
+                            <tr>
+                                <td>Rich in protein and essential vitamins</td>
+                                <td>Rich in iron</td>
+                                <td>Aid in digestion</td>
+                                <td>Highest yielding small millet</td>
+                            </tr>
+                            <tr>
+                                <td>Versatile cuisines</td>
+                                <td>Minimal crop management</td>
+                                <td>Produce good fodder</td>
+                                <td>Minimal crop management</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="image">
+                <img src="millets_images/foxtail.jpg" alt="Description for Image 3">
+            </div>
+        </div>
+        <div class="content-row reverse">
+            <div class="text">
+                      <div class="advantage-container">
+                          <div class="advantage-item">
+                              <img src="https://img.icons8.com/ios-filled/50/0000FF/water.png" alt="Water Efficient Icon">
+                              <div>
+                                  <h3>Water-Efficient</h3>
+                                  <p>Millets are highly water-efficient crops, requiring significantly less water than traditional cereals like wheat and rice. This makes them a crucial component of climate-smart agriculture in water-scarce regions.</p>
+                              </div>
+                          </div>
+                          <div class="advantage-item">
+                              <img src="https://img.icons8.com/ios-filled/50/FF0000/temperature.png" alt="Heat Tolerant Icon">
+                              <div>
+                                  <h3>Heat-Tolerant</h3>
+                                  <p>Millets are adapted to thrive in high-temperature environments, making them more resilient to the impacts of climate change, such as rising temperatures and increased heat stress.</p>
+                              </div>
+                          </div>
+                          <div class="advantage-item">
+                              <img src="icons/Nutrient_logo.png" alt="Nutrient Efficient Icon">
+                              <div>
+                                  <h3>Nutrient-Efficient</h3>
+                                  <p>Millets have a higher nutrient-use efficiency, allowing them to grow well in marginal soils with limited fertilizer inputs. This aligns with the principles of sustainable and regenerative agriculture.</p>
+                              </div>
+                             </div>
+                            <div class="advantage-item">
+                               <img src="https://img.icons8.com/ios-filled/50/FFA500/globe.png" alt="Globally Adaptable Icon">
+                            <div>
+                                <h3>Globally Adaptable</h3>
+                                <p>Millets and ancient grains are cultivated and consumed across a diverse range of regions, making them a truly global solution to food security and climate resilience.</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="image">
+                <img src="millets_images/pearl.jpg" alt="Description for Image 2">
+            </div>
+        </div>
+        <div class="content-row">
+            <div class="text">
+                  
+                    <div class="section1">
+                      <h2>Improved Nutrition</h2>
+                      <p>Millets and ancient grains are nutrient-dense, providing essential vitamins, minerals, and fiber to combat malnutrition and promote overall well-being.</p>
+                    </div>
+                  
+                    <div class="section1">
+                      <h2>Climate Resilience</h2>
+                      <p>These hardy crops can thrive in the face of climate change, helping to ensure food security and agricultural sustainability.</p>
+                    </div>
+                  
+                    <div class="section1">
+                      <h2>Empowered Farmers</h2>
+                      <p>MAHARISHI supports smallholder farmers by improving their access to resources, knowledge, and markets, empowering them to cultivate these crops successfully.</p>
+                    </div>
+                    <div class="section1">
+                      <h2>Revitalized Traditions</h2>
+                      <p>The initiative celebrates the rich cultural heritage and traditional knowledge associated with millets and ancient grains, ensuring their legacy is preserved for generations to come.</p>
+                  </div>  
+                              </div>
+            <div class="image">
+                <img src="millets_images/millet2.jpg" alt="Description for Image 3">
+            </div>
+        </div>
+        <div class="content-row reverse">
+            <div class="text">
 
+                     <div class="section1">
+                       <p>Teff, a tiny, nutrient-dense grain native to Ethiopia, is a gluten-free alternative to wheat with a unique, nutty flavor. It is a valuable source of protein, fiber, and essential minerals.
+                    </p>
+                     </div>
+                   
+                     <div class="section1">
+                       <p>Quinoa, often referred to as the "superfood of the Andes," is a versatile ancient grain with a high protein content and a complete amino acid profile. It is also a good source of fiber, iron, and antioxidants.
+                    </p>
+                     </div>
+                   
+                     <div class="section1">
+                       <p>Fonio, a small, fast-growing millet found in West Africa, is a highly nutritious grain that is rich in amino acids, minerals, and vitamins. It is also drought-resistant and well-suited to sustainable farming practices.
+                    </p>
+                     </div>
+                   
+                     <div class="section1">
+                       <p>Amaranth, a nutritious, gluten-free pseudocereal, was a staple food of the Aztecs and is making a comeback in modern cuisine. It is packed with protein, fiber, and essential vitamins and minerals.
+                    </p>
+                     </div>
+                     <div class="section1">
+                        <p>Job's tears (Coix lacryma-jobi) are nutrient-dense seeds that are high in protein, fiber, zinc, and calcium..
+                        </p>
+                      </div>
+            </div>
+            <div class="image">
+                <img src="millets_images/millet4.png" alt="Description for Image 2">
+            </div>
+        </div>
+        <div class="content-row">
+            <div class="text">
+                       <div class="section1">
+                         <h2>Connecting Researchers</h2>
+                         <p>MAHARISHI aims to establish mechanisms that connect researchers and institutions working on millets and ancient grains, facilitating the exchange of knowledge, resources, and research findings.</p>
+                       </div>
+                       <div class="section1">
+                         <h2>Building Platforms
+                        </h2>
+                         <p>The initiative will develop web-based platforms to disseminate information, share communication products, and encourage research and awareness among the global community.</p>
+                       </div>
+                     
+                       <div class="section1">
+                         <h2>Capacity Building
+                        </h2>
+                         <p>MAHARISHI will organize knowledge transfer, capacity-building activities, and international research workshops and conferences to support the development of a thriving global millet research community.
+                        </p>
+                       </div>
+                       <div class="section1">
+                         <h2>Incentivizing Innovation
+                        </h2>
+                         <p>The initiative will provide research and innovation prizes or awards to young scientists, encouraging them to pursue cutting-edge research on millets and ancient grains.
+                        </p>
+                       </div>                 
+            </div>
+            <div class="image">
+                <img src="millets_images/millet5.jpg" alt="Description for Image 3">
+            </div>
+        </div>
+    </div>
+    </section>
+   </div>
     <!-- Footer Section -->
     <div id="footer"></div> <!-- Footer will be dynamically loaded here -->
     <script>
